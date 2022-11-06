@@ -70,13 +70,19 @@ blockquote {
 	display: grid;
 	width: 100%;
 	grid-template-columns: 1fr 4fr 2fr;
-	gap: 4px;
+	gap: 40px;
 }
 
 h1 {
 	color: var(--zelena);
 	font-size: 85px;
 	margin-bottom: 30px;
+}
+
+h2 {
+	color: var(--zelena);
+	grid-column-start: 2;
+	font-size: 60px;
 }
 
 img {
@@ -87,14 +93,40 @@ header {
 	grid-column-start: 2;
 }
 
+header p, figcaption, footer p {
+	color: var(--seda);
+}
+
 p {
 	grid-column-start: 2;
+	margin: 0;
+}
+
+/***TIPY***/
+.tip {
+	background-color: var(--svetla);
+	align-self: start;
+	padding: 20px;
+	color: var(--tmava);
 }
 
 .tip-vlevo {
 	grid-column-start: 1;
-	color: var(--tmava);
+	border-right: 2px solid var(--oranzova);
+	text-align: end;
 }
+
+.tip-vpravo {
+	grid-column-start: 3;
+	border-left: 2px solid var(--oranzova);
+}
+
+.tip a {
+	color: var(--oranzova);
+}
+
+
+
 
 figure {
 	grid-column: 1 / span 3;
@@ -104,19 +136,31 @@ figure {
 blockquote {
 	grid-column: 1 / span 3;
 	text-align: center;
+	color: var(--seda);
+	font-size: 40px;
+	margin: 0;
 }
 
-.tip-vpravo {
-	grid-column-start: 3;
+blockquote::before,
+blockquote::after {
+		content: "";
+		display: block;
+		width: 150px;
+		height: 3px;
+		background-color:  var(--limetka);
+		margin: 20px auto;
+
 }
 
-h2 {
-	grid-column-start: 2;
+
+/***Patička***/
+
+footer {
+	grid-column: 2;
+	font-size: 14px;
 }
 
-a {
-	color: var(--oranzova);
-}
 
-.tip {
-	background-color: var(--svetla)}
+footer a {
+	color: var(--seda);
+}
